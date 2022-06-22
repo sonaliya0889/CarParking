@@ -103,8 +103,8 @@ public class BatchConfig {
     public LineMapper<CarParking> lineMapper() {
         DefaultLineMapper<CarParking> lineMapper = new DefaultLineMapper<>();
         DelimitedLineTokenizer lineTokenizer = new DelimitedLineTokenizer();
-        lineTokenizer.setNames(new String[] { "car_park_no", "address", "x_coord", "y_coord" });
-        lineTokenizer.setIncludedFields(new int[] { 0, 1, 2, 3 });
+        lineTokenizer.setNames(new String[] { "car_park_no", "address", "x_coord", "y_coord","car_park_type","type_of_parking_system","short_term_parking","free_parking", "night_parking", "car_park_decks", "gantry_height", "car_park_basement"});
+        lineTokenizer.setIncludedFields(new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 });
         BeanWrapperFieldSetMapper<CarParking> fieldSetMapper = new BeanWrapperFieldSetMapper<>();
         fieldSetMapper.setTargetType(CarParking.class);
         lineMapper.setLineTokenizer(lineTokenizer);
