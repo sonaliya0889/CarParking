@@ -5,77 +5,77 @@ public class CarParking {
     String address;
     String xCoord;
     String yCoord;
-    String car_park_type;
-    String type_of_parking_system;
-    String short_term_parking;
-    String free_parking;
-    String night_parking;
-    String car_park_decks;
-    String gantry_height;
-    String car_park_basement;
+    String carParkType;
+    String typeOfParkingSystem;
+    String shortTermParking;
+    String freeParking;
+    String nightParking;
+    String carParkDecks;
+    String gantryHeight;
+    String carParkBasement;
 
-    public String getCar_park_type() {
-        return car_park_type;
+    public String getCarParkType() {
+        return carParkType;
     }
 
-    public void setCar_park_type(String car_park_type) {
-        this.car_park_type = car_park_type;
+    public void setCarParkType(String carParkType) {
+        this.carParkType = carParkType;
     }
 
-    public String getType_of_parking_system() {
-        return type_of_parking_system;
+    public String getTypeOfParkingSystem() {
+        return typeOfParkingSystem;
     }
 
-    public void setType_of_parking_system(String type_of_parking_system) {
-        this.type_of_parking_system = type_of_parking_system;
+    public void setTypeOfParkingSystem(String typeOfParkingSystem) {
+        this.typeOfParkingSystem = typeOfParkingSystem;
     }
 
-    public String getShort_term_parking() {
-        return short_term_parking;
+    public String getShortTermParking() {
+        return shortTermParking;
     }
 
-    public void setShort_term_parking(String short_term_parking) {
-        this.short_term_parking = short_term_parking;
+    public void setShortTermParking(String shortTermParking) {
+        this.shortTermParking = shortTermParking;
     }
 
-    public String getFree_parking() {
-        return free_parking;
+    public String getFreeParking() {
+        return freeParking;
     }
 
-    public void setFree_parking(String free_parking) {
-        this.free_parking = free_parking;
+    public void setFreeParking(String freeParking) {
+        this.freeParking = freeParking;
     }
 
-    public String getNight_parking() {
-        return night_parking;
+    public String getNightParking() {
+        return nightParking;
     }
 
-    public void setNight_parking(String night_parking) {
-        this.night_parking = night_parking;
+    public void setNightParking(String nightParking) {
+        this.nightParking = nightParking;
     }
 
-    public String getCar_park_decks() {
-        return car_park_decks;
+    public String getCarParkDecks() {
+        return carParkDecks;
     }
 
-    public void setCar_park_decks(String car_park_decks) {
-        this.car_park_decks = car_park_decks;
+    public void setCarParkDecks(String carParkDecks) {
+        this.carParkDecks = carParkDecks;
     }
 
-    public String getGantry_height() {
-        return gantry_height;
+    public String getGantryHeight() {
+        return gantryHeight;
     }
 
-    public void setGantry_height(String gantry_height) {
-        this.gantry_height = gantry_height;
+    public void setGantryHeight(String gantryHeight) {
+        this.gantryHeight = gantryHeight;
     }
 
-    public String getCar_park_basement() {
-        return car_park_basement;
+    public String getCarParkBasement() {
+        return carParkBasement;
     }
 
-    public void setCar_park_basement(String car_park_basement) {
-        this.car_park_basement = car_park_basement;
+    public void setCarParkBasement(String carParkBasement) {
+        this.carParkBasement = carParkBasement;
     }
 
     public String getCarParkNo() {

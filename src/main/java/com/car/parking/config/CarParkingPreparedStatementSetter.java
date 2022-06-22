@@ -24,13 +24,13 @@ final public class CarParkingPreparedStatementSetter implements ItemPreparedStat
         preparedStatement.setString(3, coordinates.getLatitude());
         preparedStatement.setString(4, coordinates.getLongitude());
 
-        preparedStatement.setString(5, carParking.getCar_park_type());
-        preparedStatement.setString(6, carParking.getType_of_parking_system());
-        preparedStatement.setString(7, carParking.getShort_term_parking());
-        preparedStatement.setString(8, carParking.getFree_parking());
-        preparedStatement.setString(9, carParking.getNight_parking());
-        preparedStatement.setString(10, carParking.getCar_park_decks());
-        preparedStatement.setString(11, carParking.getGantry_height());
-        preparedStatement.setString(12, carParking.getCar_park_basement());
+        preparedStatement.setString(5, carParking.getCarParkType());
+        preparedStatement.setString(6, carParking.getTypeOfParkingSystem());
+        preparedStatement.setString(7, carParking.getShortTermParking());
+        preparedStatement.setString(8, carParking.getFreeParking());
+        preparedStatement.setString(9, carParking.getNightParking());
+        preparedStatement.setString(10, carParking.getCarParkDecks());
+        preparedStatement.setString(11, carParking.getGantryHeight());
+        preparedStatement.setString(12, carParking.getCarParkBasement());
     }
 }
