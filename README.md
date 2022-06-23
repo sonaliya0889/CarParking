@@ -1,18 +1,22 @@
 ## README
 
+* Spring Boot
+  **2.0.2**
 * Java Version
   **1.8**
-
+* Maven
+  **3.8**
 * Database
   **EmbeddedDatabase H2**
 
-* How to execute api
+* How To Build
+
+  `mvn clean install`
+  `mvn package`
+
+* How To Execute Jar
 
   `java -jar target/car-parking-0.0.1-SNAPSHOT.jar`
-
-* How to run the test
-
-  ``
 
 ## Models
 
@@ -67,6 +71,19 @@ public class CarParking {
     setter & getters
     }
 ````
+### SQL
+
+#### Nearest Parking Lot SQL
+This query will return the nearest parking lot with maximum available spots for parking, based on supplied latitude and longitude.
+Here 111.2 constant value is denoting km/degree and 57.3 is value of pi/180 degree.
+```
+SELECT ADDRESS, TOTALLOTS,AVILABLELOTS, XCOORD, YCOORD, SQRT(
+    POWER(111.2 * (ROUND(XCOORD)- [latitude]), 2) +
+    POWER(111.2 * ([longitude]-ROUND(YCOORD)) * COS(XCOORD / 57.3), 2)) AS DISTANCE FROM CARPARKING 
+INNER JOIN PARKINGLOT
+ON CARPARKING.CARPARKNO = PARKINGLOT.CARPARKNO
+ORDER BY DISTANCE ASC, AVILABLELOTS DESC OFFSET 1  LIMIT 3;
+```
 
 ## Sample API
 **Request**
