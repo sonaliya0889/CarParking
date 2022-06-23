@@ -45,18 +45,18 @@ public class BatchConfig {
     private Resource inputResource;
 
     @Bean
-    public Job readRESTJob() {
+    public Job readCSVFileJob() {
         return jobBuilderFactory
-                .get("readRESTJob")
+                .get("readCSVFileJob")
                 .incrementer(new RunIdIncrementer())
                 .start(step1())
                 .build();
     }
 
     @Bean
-    public Job readCSVFileJob() {
+    public Job readRESTJob() {
         return jobBuilderFactory
-                .get("readCSVFileJob")
+                .get("readRESTJob")
                 .incrementer(new RunIdIncrementer())
                 .start(step2())
                 .build();
@@ -66,17 +66,6 @@ public class BatchConfig {
     public Step step1() {
         return stepBuilderFactory
                 .get("step1")
-                .<ParkingLot, ParkingLot>chunk(5)
-                .reader(parkingLotReader())
-                .processor(parkingLotProcessor())
-                .writer(parkingLotWriter())
-                .build();
-    }
-
-    @Bean
-    public Step step2() {
-        return stepBuilderFactory
-                .get("step2")
                 .<CarParking, CarParking>chunk(5)
                 .reader(carParkingReader())
                 .processor(carParkingProcessor())
@@ -84,7 +73,17 @@ public class BatchConfig {
                 .build();
     }
 
-     
+    @Bean
+    public Step step2() {
+        return stepBuilderFactory
+                .get("step2")
+                .<ParkingLot, ParkingLot>chunk(5)
+                .reader(parkingLotReader())
+                .processor(parkingLotProcessor())
+                .writer(parkingLotWriter())
+                .build();
+    }
+
     @Bean
     public ItemProcessor<CarParking, CarParking> carParkingProcessor() {
         return new CarParkingProcessor();
